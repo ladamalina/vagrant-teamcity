@@ -88,16 +88,4 @@ Vagrant.configure(2) do |config|
       puppet.options = "--verbose --debug"
     end
   end
-
-  #  App VM
-  config.vm.define "app" do |app|
-
-    app.vm.box = "puppetlabs/centos-7.0-64-puppet"
-
-    app.vm.provider "virtualbox" do |app|
-      vb.memory = "256"
-    end
-
-    app.vm.network "private_network", ip: "192.168.19.102"
-  end
 end

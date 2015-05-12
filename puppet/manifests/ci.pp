@@ -1,3 +1,8 @@
+package { ['unzip']: 
+  ensure => installed, 
+  provider => yum 
+}
+
 class { 'java': }
 
 class { 'firewall': }
